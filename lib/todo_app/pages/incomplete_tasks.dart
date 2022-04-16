@@ -4,8 +4,8 @@ import 'package:state_managment/todo_app/widgets/task_widget.dart';
 
 class InCompleteTasksScreen extends StatelessWidget {
   Function fun;
-  Function remove;
-  InCompleteTasksScreen(this.fun,this.remove);
+  Function removetask;
+  InCompleteTasksScreen(this.fun,this.removetask);
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -14,7 +14,7 @@ class InCompleteTasksScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return TaskWidget(tasksList
               .where((element) => !element.isCompleted)
-              .toList()[index],fun,remove);
+              .toList()[index],fun,removetask);
         });
   }
 }
