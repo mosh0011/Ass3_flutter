@@ -15,7 +15,7 @@ class CompleteTasksScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return TaskWidget(
               tasksList.where((element) => element.isCompleted).toList()[index],
-              fun,remove);
+              fun,removetask);
         });
   }
 }
